@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    {% include 'header.html' %}
-    <body>
+{% include 'header.html' %}
         <header class="masthead" style="background-image: url('static/assets/img/home-bg.jpg')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -21,39 +18,46 @@
                     <!-- Post preview-->
                     <div class="post-preview">
 <!--                        <a href="project.html">-->
-                            <img class="d-block mx-auto mb-4" src="https://media.licdn.com/dms/image/v2/C4E03AQHE2RmOaoJYFA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1553796270645?e=1768435200&v=beta&t=qUK068UpEvw70BmVu17jWyHeX7hzl9AXtVS2VTPClN8"
+                            <img class="d-block mx-auto mb-4 rounded-circle" src="{{ url_for('static', filename='assets/img/profile_picture.jfif') }}"
         alt="My profile picture." width="350" height="350"/>
                             <h2 class="post-title">About me</h2>
-                            <p class="post-subtitle">Studying computer science with a focus in Python. I have built projects using HTML, CSS, Flask, Bootstrap, and Pandas.
-                            Learning through Udemy, Codecademy, and Harvard CS101.</p>
-                            <p>Continue with more info about yourself.</p>
+                            <p class="post-subtitle">Studying computer science with a focus on web development using Python. Learning through Udemy, Codecademy, and Harvard CS101.</p>
+                            <p> I have built projects like a digital library, games, and graphical user interfaces. These were built using PostgreSQL, HTML, CSS, Flask, Bootstrap, and Pandas.</p>
 <!--                        </a>-->
                     </div>
-                    <!-- Divider-->
-<!--                    <hr class="my-4" />-->
-                    <!-- Post preview-->
-<!--                    <div class="post-preview">-->
-<!--                        <a href="project.html">-->
-<!--                            <h2 class="post-title">Failure is not an option</h2>-->
-<!--                            <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>-->
-<!--                        </a>-->
-<!--                        <p class="post-meta">-->
-<!--                            Posted by-->
-<!--                            <a href="#!">Start Bootstrap</a>-->
-<!--                            on July 8, 2023-->
-<!--                        </p>-->
-<!--                    </div>-->
-                    <!-- Divider-->
-<!--                    <hr class="my-4" />-->
-                    <!-- Pager-->
-<!--                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>-->
+                    <br>
+                    <br>
+                        <h3>Recent Projects</h3>
                 </div>
             </div>
         </div>
-        {% include 'footer.html' %}
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../static/js/scripts.js"></script>
-    </body>
-</html>
+
+        <!-- Recent Project top 3 portfolio-->
+        <div class="container marketing">
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle" height="140" preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><image href="{{ url_for('static', filename='assets/img/todo_list.webp') }}" alt="An image of a list of things todo." width="100%" height="100%" fill="var(--bs-secondary-color)"></image></svg>
+                    <h2 class="fw-normal">Todo List</h2>
+                    <p>A web app Todo list made with Python, Flask, HTML, and styled with Semantic.</p>
+                    <p><a class="btn btn-secondary" href="https://github.com/lilwill590/Todo-List">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle" height="140" preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><image href="{{ url_for('static', filename='assets/img/typing_speed_test.png') }}" alt="Image of text from computer typing." width="100%" height="100%" fill="var(--bs-secondary-color)"></image></svg>
+                    <h2 class="fw-normal">Typing Speed Test</h2>
+                    <p>A Tkinter GUI desktop application that tests your typing speed.</p>
+                    <p><a class="btn btn-secondary" href="https://github.com/lilwill590/Typing-Speed-Test">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle" height="140" preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><image href="{{ url_for('static', filename='assets/img/morse_code.png') }}" alt="Small image of morse code." width="100%" height="100%" fill="var(--bs-secondary-color)"></image></svg>
+                    <h2 class="fw-normal">Morse Code</h2>
+                    <p>Text based program that turns a string into morse code.</p>
+                    <p><a class="btn btn-secondary" href="https://github.com/lilwill590/Morse-Code">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+        </div>
+{% include 'footer.html' %}
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../static/js/scripts.js"></script>
